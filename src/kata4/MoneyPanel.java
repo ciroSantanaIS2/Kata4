@@ -1,14 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package kata4;
 
-/**
- *
- * @author Ciro
- */
-public class MoneyPanel {
-    
+import java.awt.PopupMenu;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class MoneyPanel extends JPanel{
+
+    public MoneyPanel() {
+        this.add(createTextField());
+        this.add(new CurrencyPanel());
+    }
+
+    private JTextField createTextField() {
+        JTextField textField = new JTextField(10);
+        return textField;
+    }
+
 }
