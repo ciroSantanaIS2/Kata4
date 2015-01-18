@@ -1,14 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package kata4;
 
-/**
- *
- * @author Ciro
- */
-public class CurrencyPanel {
+import java.awt.PopupMenu;
+import javax.swing.ComboBoxModel;
+import javax.swing.JComboBox;
+import javax.swing.JPanel;
+
+public class CurrencyPanel extends JPanel {
+    private static String[] currencies = {"EUR", "USD", "CAD", "GBP"};
+
+    public CurrencyPanel() {
+        this.add(createComboBox());
+    }
+
+    private JComboBox createComboBox() {
+        JComboBox comboBox = new JComboBox(currencies);
+        return comboBox;
+    }
+
     
 }
